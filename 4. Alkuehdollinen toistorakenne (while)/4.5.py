@@ -6,7 +6,7 @@ name_input = input("Anna käyttäjätunnus")
 password_input = input("Anna salasana")
 
 while name_input != name or password_input != password:
-    print("Pääsy evätty")
+    print("Väärä käyttäjätunnus tai salasana")
     n += 1
     if n >= 5:
         print("Liian monta yritystä")
