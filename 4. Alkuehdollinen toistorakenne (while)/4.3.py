@@ -1,12 +1,12 @@
 n = input("Anna luku")
-smallest = float(n)
-biggest = float(n)
+minValue = float(n)
+maxValue = float(n)
 while n != "":
     n = float(n)
-    if n < smallest:
-        smallest = n
-    if n > biggest:
-        biggest = n
+    if n < minValue:
+        minValue = n
+    if n > maxValue:
+        maxValue = n
     n = input("Anna luku")
 
-print(f"Pienin luku {smallest} \nIsoin luku {biggest}")
+print(f"Pienin luku {minValue} \nIsoin luku {maxValue}")
