@@ -1,7 +1,12 @@
+import math
+
+#   laskee senttimetrit metreiksi, ympyrän pinta-alan
+#   sekä hinnan per neliömetri
 def pizza_calculator(d, price):
-    d = float(d) / 100
-    n = float(d) * 2
-    total = float(price) / n
+    r = float(d) / 2
+    a = float(r) ** 2 * math.pi
+    a = float(a) / 100
+    total = float(price) / a
     return total
 
 pizza1d = input("Anna pizzan halkaisija senttimetreinä")
