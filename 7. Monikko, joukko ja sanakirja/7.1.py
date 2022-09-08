@@ -1,14 +1,15 @@
-kuukaudet = ("tammikuu", "helmikuu", "maaliskuu",
+months = ("tammikuu", "helmikuu", "maaliskuu",
              "huhtikuu", "toukokuu","kesäkuu",
              "heinäkuu", "elokuu", "syyskuu",
              "lokakuu", "marraskuu", "joulukuu")
-jarjestysluku = int(input("Anna kuukauden numero"))
-kuukausi = jarjestysluku - 1
-if kuukausi < 2 or kuukausi == 11:
+userInput = int(input("Anna kuukauden numero"))
+month = userInput - 1
+print(months[month])
+if month < 2 or month == 11:
     print("talvi")
-elif kuukausi < 5:
+elif month < 5:
     print("kevät")
-elif kuukausi < 8:
+elif month < 8:
     print("kesä")
-elif kuukausi < 11:
+elif month < 11:
     print("syksy")
