@@ -1,4 +1,7 @@
-kuukaudet = ("tammikuu", "helmikuu", "maaliskuu", "huhtikuu", "toukokuu", "kesäkuu", "heinäkuu", "elokuu", "syyskuu", "lokakuu", "marraskuu", "joulukuu")
+kuukaudet = ("tammikuu", "helmikuu", "maaliskuu",
+             "huhtikuu", "toukokuu","kesäkuu",
+             "heinäkuu", "elokuu", "syyskuu",
+             "lokakuu", "marraskuu", "joulukuu")
 jarjestysluku = int(input("Anna kuukauden numero"))
 kuukausi = jarjestysluku - 1
 if kuukausi < 2 or kuukausi == 11:
