@@ -5,16 +5,15 @@ airports = {"EFHK":"Helsinki-Vantaan lentokenttä",
 def new_airport(icao, name):
     airports[icao] = name
 
-print("ICAO-koodit isoilla kirjaimilla.")
 print("Toiminnot ovat \"haku\", \"uusi\", \"lopeta\".")
-user = input("Mitä haluat tehdä?")
+user = input("Mitä haluat tehdä?").lower()
 
 while user != "lopeta":
     if user == "uusi":
-        code = input("Anna lentokentän ICAO-koodi")
+        code = input("Anna lentokentän ICAO-koodi").upper()
         location = input("Anna lentokentän nimi")
         new_airport(code, location)
     elif user == "haku":
-        code = input("Anna lentokentän ICAO-koodi")
+        code = input("Anna lentokentän ICAO-koodi").upper()
         print(airports[code])
-    user = input("Mitä haluat tehdä")
+    user = input("Mitä haluat tehdä").lower()
