@@ -11,8 +11,11 @@ user = input("Mitä haluat tehdä?").lower()
 while user != "lopeta":
     if user == "uusi":
         code = input("Anna lentokentän ICAO-koodi").upper()
-        location = input("Anna lentokentän nimi")
-        new_airport(code, location)
+        if code not in airports:
+            location = input("Anna lentokentän nimi")
+            new_airport(code, location)
+        else:
+            print("Lentokenttä on jo hakemistossa")
     elif user == "haku":
         code = input("Anna lentokentän ICAO-koodi").upper()
         print(airports[code])
