@@ -20,7 +20,6 @@ class Car:
 
         else:
             self.current_speed += acceleration
-        return self.current_speed
 
     def move(self, hours):
         self.distance = self.distance + self.current_speed * hours
@@ -36,8 +35,6 @@ while race_not_over:
     for cars in competing_cars:
         cars.accelerate(random.randint(-10, 15))
         cars.move(1)
-
-    for cars in competing_cars:
         if cars.distance >= 10000:
             race_not_over = False
 
