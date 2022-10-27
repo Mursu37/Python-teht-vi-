@@ -1,5 +1,4 @@
 class Elevator:
-
     def __init__(self, min_floor, max_floor):
         self.min_floor = min_floor
         self.max_floor = max_floor
@@ -34,7 +33,6 @@ class Elevator:
 
 
 class House:
-
     def __init__(self, min_floor, max_floor, elevator_count):
         self.elevators = []
         self.min_floor = min_floor
@@ -50,11 +48,20 @@ class House:
         print(f"Olet hississä {current_ele.number}")
         current_ele.move_to(floor)
 
+    def firealarm(self):
+        print("Palohälyytys!")
+        for elevator in self.elevators:
+            elevator.move_to(elevator.min_floor)
+
 
 house = House(0, 7, 3)
 
 house.use_elevator(2, 9)
-house.use_elevator(1, 2)
+house.use_elevator(1, 5)
 house.use_elevator(2, -1)
-house.use_elevator(1, 3)
 house.use_elevator(3, 3)
+
+house.firealarm()
+
+for elevator in house.elevators:
+    print(f"Hissi {elevator.number} on kerroksessa {elevator.current}")
