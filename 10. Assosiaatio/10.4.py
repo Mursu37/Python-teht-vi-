@@ -24,6 +24,7 @@ class Car:
     def move(self, hours):
         self.distance = self.distance + self.current_speed * hours
 
+
 class Competition:
     def __init__(self, name, goal, competing_cars=[]):
         self.name = name
@@ -65,4 +66,3 @@ while race_running:
 
     if race.time % 10 == 0:
         race.print_stats()
-
