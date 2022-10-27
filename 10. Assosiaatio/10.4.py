@@ -26,13 +26,15 @@ class Car:
 
 
 class Competition:
-    def __init__(self, name, goal, competing_cars=[]):
+    def __init__(self, name, goal, competing_cars=None):
         self.name = name
         self.goal = goal
         self.competing_cars = competing_cars
         self.time = 0
 
     def create_cars(self, count):
+        if self.competing_cars is None:
+            self.competing_cars = []
         for i in range(count):
             car = Car("ABC-" + str(count), random.randint(100, 200))
             self.competing_cars.append(car)
