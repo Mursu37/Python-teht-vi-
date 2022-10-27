@@ -36,7 +36,7 @@ class Competition:
         if self.competing_cars is None:
             self.competing_cars = []
         for i in range(count):
-            car = Car("ABC-" + str(count), random.randint(100, 200))
+            car = Car("ABC-" + str(i+1), random.randint(100, 200))
             self.competing_cars.append(car)
 
     def hour_pass(self):
