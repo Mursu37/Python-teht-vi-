@@ -2,10 +2,10 @@ import random
 
 
 class Car:
-    def __init__(self, reg, top_speed, current_speed=0, distance=0):
+    def __init__(self, reg, top_speed, distance=0):
         self.reg = reg
         self.top_speed = top_speed
-        self.current_speed = current_speed
+        self.current_speed = 0
         self.distance = distance
 
     def accelerate(self, acceleration):
@@ -54,6 +54,7 @@ class Competition:
         for cars in self.competing_cars:
             if cars.distance >= self.goal:
                 self.print_stats()
+                print(f"{cars.reg} Voitti")
                 return True
 
 
@@ -65,6 +66,7 @@ while race_running:
     race.hour_pass()
     if race.competition_over():
         race_running = False
+        break
 
     if race.time % 10 == 0:
         race.print_stats()
