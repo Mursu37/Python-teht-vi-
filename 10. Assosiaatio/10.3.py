@@ -3,6 +3,7 @@ class Elevator:
         self.min_floor = min_floor
         self.max_floor = max_floor
         self.current = min_floor
+        self.number = None
 
     def move_to(self, floor):
         if floor > self.current:
