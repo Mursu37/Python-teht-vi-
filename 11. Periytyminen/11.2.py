@@ -2,10 +2,10 @@ import random
 
 
 class Car:
-    def __init__(self, reg, top_speed, current_speed=0, distance=0):
+    def __init__(self, reg, top_speed, distance=0):
         self.reg = reg
         self.top_speed = top_speed
-        self.current_speed = current_speed
+        self.current_speed = 0
         self.distance = distance
 
     def accelerate(self, acceleration):
@@ -30,16 +30,16 @@ class Car:
 
 class Electric(Car):
 
-    def __init__(self, reg, top_speed, battery, current_speed=0, distance=0):
+    def __init__(self, reg, top_speed, battery, distance=0):
         self.battery = battery
-        Car.__init__(self, reg, top_speed, current_speed, distance)
+        Car.__init__(self, reg, top_speed, distance)
 
 
 class Combustion(Car):
 
-    def __init__(self, reg, top_speed, tank_size, current_speed=0, distance=0):
+    def __init__(self, reg, top_speed, tank_size, distance=0):
         self.tank_size = tank_size
-        Car.__init__(self, reg, top_speed, current_speed, distance)
+        Car.__init__(self, reg, top_speed, distance)
 
 
 ev = Electric("ABC-15", 180, 52.5)
