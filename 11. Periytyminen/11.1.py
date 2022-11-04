@@ -15,7 +15,7 @@ class Book(Publication):
         print(f"Nimi: {self.name} \nKirjoittaja: {self.author} \nSivumäärä: {self.page_count} \n")
 
 
-class Paper(Publication):
+class Magazine(Publication):
 
     def __init__(self, name, editor):
         Publication.__init__(self, name)
@@ -25,7 +25,7 @@ class Paper(Publication):
         print(f"Nimi: {self.name} \nPäätoimittaja: {self.editor} \n")
 
 
-aa = Paper("Aku Ankka", "Aki hyyppä")
+aa = Magazine("Aku Ankka", "Aki hyyppä")
 hytti = Book("Hytti n:o 6", "Rosa Liksom", 200)
 
 aa.print_info()
