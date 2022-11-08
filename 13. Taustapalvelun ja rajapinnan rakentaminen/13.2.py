@@ -15,6 +15,7 @@ def fetch_data(icao):
         name = data[0]
         municipality = data[1]
         answer = {
+            "ICAO": icao,
             "Name": name,
             "Municipality": municipality
         }
