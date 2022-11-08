@@ -20,7 +20,7 @@ def prime_check(number):
         "isPrime": is_prime
     }
 
-#    json_data = json.dumps(answer, default=lambda o: o.__dict__, indent=4)
+#    json_data = json.dumps(answer, default=lambda o: o.__dict__, indent=4) turha?
 
     return answer
 
