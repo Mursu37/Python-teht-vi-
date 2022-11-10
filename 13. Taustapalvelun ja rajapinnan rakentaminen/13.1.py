@@ -1,5 +1,5 @@
 from flask import Flask
-# import json
+
 app = Flask(__name__)
 
 
@@ -7,7 +7,6 @@ app = Flask(__name__)
 def prime_check(number):
     is_prime = False
     for i in range(2, number):
-        print(i)
         if number % i == 0:
             print("Ei ole alkuluku")
             break
@@ -19,8 +18,6 @@ def prime_check(number):
         "Number": number,
         "isPrime": is_prime
     }
-
-#    json_data = json.dumps(answer, default=lambda o: o.__dict__, indent=4) turha?
 
     return answer
 
